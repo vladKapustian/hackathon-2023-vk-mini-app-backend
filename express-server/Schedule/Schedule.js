@@ -1,6 +1,6 @@
 const { DataTypes, HasMany } = require('sequelize');
-const sequelize = require('./sequelize');
-const Day = require('./Day')
+const sequelize = require('../sequelize');
+const Day = require('../Day/Day')
 
 const Schedule = sequelize.define('Schedule', {
   id: {

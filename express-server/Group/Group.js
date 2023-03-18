@@ -1,6 +1,6 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('./sequelize');
-const Schedule = require('./Schedule')
+const sequelize = require('../sequelize');
+const Schedule = require('../Schedule/Schedule')
 
 const Group = sequelize.define('Group', {
   id: {

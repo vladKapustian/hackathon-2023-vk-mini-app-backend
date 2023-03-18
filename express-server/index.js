@@ -2,10 +2,10 @@ const express = require('express');
 const app = express();
 const sequelize = require('./sequelize')
 
-const Group = require('./Group')
-const Lesson = require('./Lesson')
-const Day = require('./Day')
-const Schedule = require('./Schedule')
+const Group = require('./Group/Group')
+const Lesson = require('./Lesson/Lesson')
+const Day = require('./Day/Day')
+const Schedule = require('./Schedule/Schedule')
 
 app.get('/', (req, res) => {
     res.send({ message: 'Hello WWW!' });
