@@ -25,23 +25,4 @@ const Lesson = sequelize.define('Lesson', {
   },
 });
 
-try {
-  Lesson.bulkCreate([
-    { 
-      subject: "Инфокоммуникационные системы, сети и телекоммуникации",
-      time: "10:10 — 11:40",
-      classroom: "ауд. 307",
-      teacher: "доц.Щербаков С.М."
-    },
-    { 
-      subject: "Математика",
-      time: "11:50 — 13:20",
-      classroom: "ауд. 605",
-      teacher: "доц.Лукьянова Г.В."
-    },
-  ])
-} catch (error) {
-  console.log(error)
-}
-
 module.exports = Lesson;

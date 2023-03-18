@@ -10,14 +10,5 @@ const Day = sequelize.define('Day', {
   }
 });
 
-try {
-  Day.bulkCreate([
-    { LessonId: 2 },
-    { LessonId: 1 }
-  ])
-} catch (error) {
-  console.log(error)
-}
-
 Lesson.hasMany(Day)
 module.exports = Day;

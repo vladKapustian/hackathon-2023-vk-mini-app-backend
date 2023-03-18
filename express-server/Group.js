@@ -22,22 +22,5 @@ const Group = sequelize.define('Group', {
   },
 });
 
-try {
-  Group.bulkCreate([
-    {
-      faculty: "КТиБ",
-      course: 1,
-      group_name: "ИСТ-311"
-    },
-    {
-      faculty: "КТиБ",
-      course: 1,
-      group_name: "ПМИ-311"
-    },
-  ])
-} catch (error) {
-  console.log(error)
-}
-
 Schedule.hasOne(Group);
 module.exports = Group;

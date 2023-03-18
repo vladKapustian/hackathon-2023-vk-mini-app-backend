@@ -10,13 +10,5 @@ const Schedule = sequelize.define('Schedule', {
   }
 });
 
-try {
-  Schedule.bulkCreate([
-    { DayId: 2 }, { DayId: 1 }
-  ])
-} catch (error) {
-  console.log(error)
-}
-
 Day.hasMany(Schedule)
 module.exports = Schedule;
