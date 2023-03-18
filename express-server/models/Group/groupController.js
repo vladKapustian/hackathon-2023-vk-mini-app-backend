@@ -1,3 +1,5 @@
+const Group = require("./Group")
+
 export const getFaculties = async (req, res) => {
     try {
         const faculties = await Group.findAll({

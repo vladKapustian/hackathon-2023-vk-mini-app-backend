@@ -7,6 +7,8 @@ const Lesson = require('./models/Lesson/Lesson')
 const Day = require('./models/Day/Day')
 const Schedule = require('./models/Schedule/Schedule')
 
+const groupController = require("./models/Group/groupController")
+
 app.get('/', (req, res) => {
     res.send({ message: 'Hello WWW!' });
 });
