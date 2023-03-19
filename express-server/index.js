@@ -7,7 +7,12 @@ const Lesson = require('./models/Lesson/Lesson')
 const Day = require('./models/Day/Day')
 const Schedule = require('./models/Schedule/Schedule')
 
-const groupController = require("./models/Group/groupController")
+import {
+    getFaculties,
+    getCourses,
+    getGroups
+} from "./models/Group/groupController"
+import getSchedule from "./models/Schedule/scheduleController"
 
 app.get('/', (req, res) => {
     res.send({ message: 'Hello WWW!' });
