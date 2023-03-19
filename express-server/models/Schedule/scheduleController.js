@@ -12,13 +12,13 @@ export const getSchedule = async (req, res) => {
 
         const day = await Day.findAll({
             where: {
-                'id': schedule.DayId
+                'id': schedule[0].DayId
             }
         });
 
         const lessons = await Lesson.findAll({
             where: {
-                'id': day.LessonId
+                'id': day[0].LessonId
             }
         })
 
