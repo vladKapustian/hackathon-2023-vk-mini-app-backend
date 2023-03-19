@@ -1,7 +1,7 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../../sequelize');
+import { DataTypes } from 'sequelize';
+import { sequelize } from '../../sequelize.js';
 
-const Lesson = sequelize.define('Lesson', {
+export  const Lesson = sequelize.define('Lesson', {
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
@@ -24,5 +24,3 @@ const Lesson = sequelize.define('Lesson', {
     allowNull: false,
   },
 });
-
-module.exports = Lesson;

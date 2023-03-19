@@ -1,8 +1,8 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../../sequelize');
-const Schedule = require('../Schedule/Schedule')
+import { DataTypes } from "sequelize";
+import { sequelize } from "../../sequelize.js";
+import { Schedule } from "../Schedule/Schedule.js";
 
-const Group = sequelize.define('Group', {
+export const Group = sequelize.define("Group", {
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
@@ -23,4 +23,3 @@ const Group = sequelize.define('Group', {
 });
 
 Group.hasOne(Schedule);
-module.exports = Group;

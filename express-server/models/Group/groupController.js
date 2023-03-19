@@ -1,4 +1,4 @@
-const Group = require("./Group")
+import { Group } from "./Group.js";
 
 export const getFaculties = async (req, res) => {
     try {

@@ -1,6 +1,6 @@
-const Schedule = require("./Schedule");
-const Day = require("../Schedule/Schedule");
-const Lesson = require("../Lesson/Lesson");
+import { Schedule } from "../Schedule/Schedule.js";
+import { Day } from "../Day/Day.js";
+import { Lesson } from "../Lesson/Lesson.js";
 
 export const getSchedule = async (req, res) => {
   try {

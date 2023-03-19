@@ -1,14 +1,13 @@
-const { DataTypes, HasMany } = require('sequelize');
-const sequelize = require('../../sequelize');
-const Day = require('../Day/Day')
+import { DataTypes } from "sequelize";
+import { sequelize } from "../../sequelize.js";
+import { Day } from "../Day/Day.js";
 
-const Schedule = sequelize.define('Schedule', {
+export const Schedule = sequelize.define("Schedule", {
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
     primaryKey: true,
-  }
+  },
 });
 
-Schedule.hasMany(Day)
-module.exports = Schedule;
+Schedule.hasMany(Day);
