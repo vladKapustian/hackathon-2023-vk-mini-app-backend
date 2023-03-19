@@ -7,8 +7,12 @@ const Day = sequelize.define('Day', {
     type: DataTypes.INTEGER,
     autoIncrement: true,
     primaryKey: true,
+  },
+  dayNumber: {
+    type: DataTypes.INTEGER,
+    allowNull: false
   }
 });
 
-Lesson.hasMany(Day)
+Day.hasMany(Lesson)
 module.exports = Day;

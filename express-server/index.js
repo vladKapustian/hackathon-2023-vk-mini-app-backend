@@ -46,7 +46,7 @@ try {
           teacher: "доц.Лукьянова Г.В."
         },
     ]);
-    Day.bulkCreate([{ LessonId: 2 },{ LessonId: 1 }]);
+    Day.bulkCreate([{ dayNumber: 1, LessonId: 2 },{ dayNumber: 2, LessonId: 1 }]);
     Schedule.bulkCreate([{ DayId: 2 }, { DayId: 1 }]);
     Group.bulkCreate([
         {

@@ -10,5 +10,5 @@ const Schedule = sequelize.define('Schedule', {
   }
 });
 
-Day.hasMany(Schedule)
+Schedule.hasMany(Day)
 module.exports = Schedule;

@@ -4,21 +4,26 @@ const Lesson = require("../Lesson/Lesson")
 
 export const getSchedule = async (req, res) => {
     try {
-        const schedule = await Schedule.findAll({
+        const schedule = await Schedule.findOne({
             where: {
                 'id': req.body
             }
         });
-
-        const day = await Day.findAll({
+        
+        if(req.body.returnWeek) {
+            const day = await Day.findAll();
+        } else {
+            const day = await Day.findAll({
             where: {
-                'id': schedule[0].DayId
+                'id': schedule.DayId,
+                'dayNumber': req.body.dayNumber
             }
         });
-
+        }
+        
         const lessons = await Lesson.findAll({
             where: {
-                'id': day[0].LessonId
+                'id': day.LessonId
             }
         })
 

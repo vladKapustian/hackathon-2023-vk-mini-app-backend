@@ -22,5 +22,5 @@ const Group = sequelize.define('Group', {
   },
 });
 
-Schedule.hasOne(Group);
+Group.hasOne(Schedule);
 module.exports = Group;
