@@ -75,6 +75,6 @@ app.get("/groups", getGroups);
 
 app.get("/schedule", getSchedule);
 
-app.listen(3333, () => {
+app.listen(3000, () => {
   console.log("Application listening on port 3333!");
 });
