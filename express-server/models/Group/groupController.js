@@ -28,7 +28,7 @@ export const getCourses = async (req, res) => {
 export const getGroups = async (req, res) => {
     try {
         const groups = await Group.findAll({
-            attributes: ['group_name'],
+            attributes: ['id', 'group_name'],
             where: {
                 'faculty': req.body,
                 'course': req.body
