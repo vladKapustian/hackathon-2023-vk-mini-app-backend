@@ -4,10 +4,11 @@ import { sequelize } from "../../sequelize.js";
 export const getFaculties = async (req, res) => {
   try {
     const faculties = await Group.findAll({
-      attributes: [sequelize.fn("DISTINCT", Sequelize.col("faculty")), "unique_key"],
-      // attributes: ['faculty']
+      attributes: ["faculty"],
     });
-    res.status(200).send(faculties);
+    const result = Array.from(new Set(faculties.map(({ faculty }) => faculty)));
+
+    res.status(200).send(result);
   } catch (error) {
     res.status(500).send(error);
   }
